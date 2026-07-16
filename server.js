@@ -1,13 +1,27 @@
 const express = require("express");
+
+const dotenv = require("dotenv");
+
+const cors = require("cors");
+
+const connectDB = require("./config/db");
+
+dotenv.config();
+
+//connectDB();
+
 const app = express();
 
-const PORT = 3000;
+app.use(cors());
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("URL Shortener API is running! ");
+  res.send("URL Shortener API Running");
 });
 
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
-  console.log(`server is running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
