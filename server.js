@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const connectDB = require("./config/db");
 const urlRoutes = require("./routes/urlRoutes");
+const path = require("path");
 
 dotenv.config();
 
@@ -25,6 +26,13 @@ app.get("/", (req, res) => {
     message: "URL Shortener API Running",
   });
 });
+
+
+
+
+
+
+app.use(express.static(path.join(__dirname, "public")));
 
 const PORT = process.env.PORT || 5000;
 
