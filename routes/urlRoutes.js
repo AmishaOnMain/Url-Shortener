@@ -11,10 +11,6 @@ const {
   redirectToOriginalUrl,
 } = require("../controllers/urlController");
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
 // Create Short URL
 router.post("/shorten", createShortUrl);
 

@@ -7,7 +7,7 @@ const result = document.getElementById("result");
 const shortUrlInput = document.getElementById("shortUrl");
 const copyBtn = document.getElementById("copyBtn");
 
-const API = "http://localhost:5000";
+const API = window.location.origin;
 
 shortenBtn.addEventListener("click", shortenURL);
 
