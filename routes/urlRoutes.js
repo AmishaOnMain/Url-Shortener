@@ -3,12 +3,12 @@ const express = require("express");
 const router = express.Router();
 
 const {
-    createShortUrl,
-    getOriginalUrl,
-    updateShortUrl,
-    deleteShortUrl,
-    getUrlStats,
-    redirectToOriginalUrl,
+  createShortUrl,
+  getOriginalUrl,
+  updateShortUrl,
+  deleteShortUrl,
+  getUrlStats,
+  redirectToOriginalUrl,
 } = require("../controllers/urlController");
 
 // Create Short URL
