@@ -16,12 +16,7 @@ body{
 
     font-family:Inter,sans-serif;
 
-    background:linear-gradient(
-        135deg,
-        #4f46e5,
-        #7c3aed,
-        #ec4899
-    );
+    background-color:#faf0ca;
 
 }
 
@@ -35,9 +30,9 @@ body{
 
 .url-card{
 
-    width:700px;
+    width:500px;
 
-    background:rgba(255,255,255,.15);
+    background:#f4d35e;
 
     backdrop-filter:blur(20px);
 
@@ -82,6 +77,8 @@ body{
     height:55px;
 
     font-weight:600;
+
+    background-color: #0d3b66;
 
 }
 
