@@ -1,87 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>URL Shortener</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
+      <div class="url-card">
+        <h1>
+          <i class="fa-solid fa-link"></i>
+          URL Shortener
+        </h1>
 
-        <div class="url-card">
+        <p class="subtitle">
+          Paste your long URL and get a short one instantly.
+        </p>
 
-            <h1>🔗 URL Shortener</h1>
+        <input
+          type="url"
+          id="urlInput"
+          class="form-control form-control-lg"
+          placeholder="https://example.com"
+        />
 
-            <p class="subtitle">
-                Paste your long URL and get a short one instantly.
-            </p>
+        <button id="shortenBtn" class="btn btn-primary btn-lg mt-4 w-100">
+          Shorten URL
+        </button>
 
-            <input
-                type="url"
-                id="urlInput"
-                class="form-control form-control-lg"
-                placeholder="https://example.com">
-
-            <button
-                id="shortenBtn"
-                class="btn btn-primary btn-lg mt-4 w-100">
-
-                Shorten URL
-
-            </button>
-
-            <div
-                id="loader"
-                class="text-center mt-4 d-none">
-
-                <div class="spinner-border"></div>
-
-            </div>
-
-            <div
-                id="result"
-                class="result-box d-none">
-
-                <h5>Your Short URL</h5>
-
-                <div class="input-group">
-
-                    <input
-                        id="shortUrl"
-                        class="form-control"
-                        readonly>
-
-                    <button
-                        id="copyBtn"
-                        class="btn btn-success">
-
-                        Copy
-
-                    </button>
-
-                </div>
-
-            </div>
-
+        <div id="loader" class="text-center mt-4 d-none">
+          <div class="spinner-border"></div>
         </div>
 
+        <div id="result" class="result-box d-none">
+          <h5>Your Short URL</h5>
+
+          <div class="input-group">
+            <input id="shortUrl" class="form-control" readonly />
+
+            <button id="copyBtn" class="btn btn-success">
+              <i class="fa-solid fa-copy"></i>
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-<script src="functionality.js"></script>
-
-</body>
-
+    <script src="functionality.js"></script>
+  </body>
 </html>
